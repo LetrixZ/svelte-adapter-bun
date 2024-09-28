@@ -14,6 +14,7 @@ const serverOptions = {
   hostname,
   port,
   development: env("SERVERDEV", build_options.development ?? false),
+  reusePort: build_options.reusePort,
   error(error) {
     console.error(error);
     return new Response("Uh oh!!", { status: 500 });

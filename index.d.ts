@@ -37,6 +37,12 @@ interface BuildOptions {
    * @default true
    */
   assets?: boolean;
+
+  /**
+   * Share the same port across multiple processes
+   * @default false
+   */
+  reusePort?: boolean;
 }
 type BuildOptionsMap = keyof BuildOptions;
 
