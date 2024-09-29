@@ -23,5 +23,11 @@ const serverOptions = {
 
 websocket ? (serverOptions.websocket = websocket) : 0;
 
-console.info(`Listening on ${hostname + ":" + port}` + (websocket ? " (Websocket)" : ""));
-serve(serverOptions);
+export default () => {
+  console.info(
+    `[PID: ${process.pid}] Listening on ${hostname + ":" + port}` +
+      (websocket ? " (Websocket)" : ""),
+  );
+
+  serve(serverOptions);
+};
